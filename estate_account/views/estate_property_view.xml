@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <!-- Inherit Form View to Modify it -->
+       <record id="view_estate_account_estate_property_form_inherit" model="ir.ui.view">
+           <field name="name">estate.account.estate.property.form.inherit</field>
+           <field name="model">estate.property</field>
+           <field name="inherit_id" ref="estate.view_estate_estate_property_form"/>
+           <field name="arch" type="xml">
+
+               <xpath expr="//field[@name='selling_price']" position="after">
+                   <field name="invoice_id" readonly="1" />
+               </xpath>
+
+           </field>
+       </record>
+
+    </data>
+</odoo>
